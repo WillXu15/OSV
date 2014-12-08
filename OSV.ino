@@ -101,9 +101,9 @@ void loop(){
     }
   } else if(stage == 3){
     rf.sendMessage("Stage 3: Moving to x = 3.18");
-    if(marker.theta>0.1){
+    if(marker.theta>0.07){
       steer(7);
-    } else if(marker.theta<-0.1){
+    } else if(marker.theta<-0.07){
        steer(-7);
     } else{
       steer(0);
@@ -159,11 +159,11 @@ void loop(){
     }
   } else if(stage == 7){
     rf.sendMessage("Stage 7: Moving to x = 3.18");
-    if(marker.x < 3.19){
+    if(marker.x < 3.24){
       drive(35);
       delay(250);
       drive(0);
-    } else if(marker.x > 3.35){
+    } else if(marker.x > 3.4){
       drive(-40);
       delay(300);
       drive(0);
